@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.flex-container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#23044b,#2a0433);
+}
+.app-container{
+    height: fit-content;
+    width: 70vw;
+    border: 30px solid #28022f70;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: linear-gradient(#d15bdc,#cc1cb1);
+    color: #f0bdf8;
+    border-radius: 20px;
+    padding-block: 2rem;
+    padding-inline: 3rem;
+    gap: 1rem;
+}
+.status{
+    display: flex;
+    justify-content: space-between;
+    align-self: stretch;
+}
+#turn-data{
+    font-size:2rem;
+}
+.game-board{
+    align-self: center;
+    display: grid;
+    grid-template-columns: repeat(3,8vw);
+    grid-template-rows: repeat(3,8vw);
+}
+.cell{
+    border: 2px solid rgb(237, 164, 232);
+    color: #610846;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.cell:hover{
+    background-color: #f466d148;
+}
+.line{
+    text-decoration: line-through;
+}
+.heading{
+    font-family: Verdana;
+}
+#turn-data{
+    font-family: Consolas;
+}
+.restart-btn{
+    --glow-color: #d9b0ff;
+    --glow-spread-color: #bf7bffc7;
+    --enhanced-glow-color: #e7ceff;
+    --btn-color: rgb(103, 5, 110);
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+}
+
+.game-board .cell0,
+.game-board .cell1,
+.game-board .cell2{
+    border-top: none;
+}
+.game-board .cell2,
+.game-board .cell5,
+.game-board .cell8{
+    border-right: none;
+}
+.game-board .cell6,
+.game-board .cell7,
+.game-board .cell8{
+    border-bottom: none;
+}
+.game-board .cell0,
+.game-board .cell3,
+.game-board .cell6{
+    border-left: none;
+}
